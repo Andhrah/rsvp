@@ -7,10 +7,16 @@
 # all use the same configuration file. If you want different
 # configurations or dependencies per app, it is best to
 # move said applications out of the umbrella.
+
+# General application configuration
 import Config
 
 config :rsvp_web,
   generators: [context_app: false]
+
+# Configure your database
+config :irite,
+  ecto_repos: [Rsvp.Repo]
 
 # Configures the endpoint
 config :rsvp_web, RsvpWeb.Endpoint,

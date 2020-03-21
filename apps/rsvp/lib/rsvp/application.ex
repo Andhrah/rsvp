@@ -9,6 +9,9 @@ defmodule Rsvp.Application do
     children = [
       # Starts a worker by calling: Rsvp.Worker.start_link(arg)
       # {Rsvp.Worker, arg}
+
+      # Start the Ecto repository
+      worker(Rsvp.Repo, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

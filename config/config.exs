@@ -9,6 +9,14 @@
 # move said applications out of the umbrella.
 import Config
 
+config :server, Server.Repo,
+  database: "rsvp",
+  username: "postgres",
+  password: "password",
+  hostname: "localhost"
+
+config :server, ecto_repos: [Server.Repo]
+
 config :client,
   generators: [context_app: false]
 
